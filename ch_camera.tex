@@ -1,0 +1,96 @@
+\chapter{Tracking And Processing The Line Using Image Processing}
+\label{chap:camera}
+
+In this section the methods for capturing images and performing the nessesary processing are explained in detail, with emphasis on how the image is processed to produce an error signal for the control system.
+
+
+\section{Capturing The Image}
+As explained in the introduction, the camera used for this project is a Sony PS3 Eye camera, which is based on OmniVision's OV543 camera sensor. All image capture and processing is carried out in the Raspberry Pi running the Raspbian Linux distribution.
+
+The PS3 Eye camera is supported directly by the Linux kernel, and can be controlled by user software through the Video4Linux driver interface. The PS3 Eye camera was choosen for this project, because of its specification and low price. The camera is capable of shooting 125 frame per second, why it is perfect for computer vision applications (what is actully also was made for).
+
+When the robot starts, the camera is set up to deliver 30 frames per second, in gray-scale colors. As part of the initialization, a callback is given to the camera module, and is called every time a new frame is ready for processing. All source code for initialization and setup of the camera, is implemented in `camera.h` and `camera.c` (see appendix). 
+
+
+
+..\\
+..\\
+..\\
+FPS, size, camera angle, camera height.
+Playstation3 Eye Camera, OV534 sensor, Video4Linux driver, memory mapped files for faster access.
+Limitations of the frame rate.
+
+%
+%
+%
+%
+\section{Identifying and Extracting the Line}
+
+Whenever an image has been captured and is available in the memory, it is time to do the image processing and extract the line from the background. This is done using the steps listen below.
+
+\begin{itemize}
+	\item Contrast and brightness is adjusted
+	\item The image is `sliced` into six horizontal slices
+	\item For each slice, a histogram is calculated, and from that a optimum thresholding value
+	\item Finally each pixel in each slice is marked as LINE if below the threshold value, or marked as FLOOR if above the threshold value
+\end{itemize}
+
+%
+%
+%
+%
+\subsection{Contrast and brightness}
+
+The contrast and brightness adjustments are simple point-processing operations, which can be describes with the following equation.
+\begin{equation}
+	g(x,y) = a \cdot f(x,y) + b
+\end{equation}
+
+%
+%
+%
+%
+\subsection{Histogram}
+
+Figure: Image before thresholding, histogram of the same image (use MATLAB's imhist and imread)
+
+
+%
+%
+%
+%
+\subsection{Slicing}
+
+Figure: Image with slices marked
+
+%
+%
+%
+%
+\subsection{Optimum thresholding}
+
+Moving average filter (16-length)
+Figure: Thresholded image, histogram illustration
+
+%
+%
+%
+%
+\section{Calculating the Error Signal}
+
+Center of middle mass, multiple points, mass
+
+Figure: Image with error points
+
+\begin{equation}
+	x_c = \frac{1}{N} \sum_{i = 1}^{N}{x_i} 
+\end{equation}
+
+\begin{equation}
+	y_c = \frac{1}{N} \sum_{i = 1}^{N}{y_i} 
+\end{equation}
+
+
+\section{Performance Considerations and Possible Improvements}
+Frame rate, further processing, light
+

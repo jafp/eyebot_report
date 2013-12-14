@@ -1,0 +1,52 @@
+\BOOKMARK [0][-]{section*.1}{Contents}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Subsystems and Block Diagram}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Requirements Specification}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Requirements Specification}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.3.1}{Assumptions}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.2}{Formal requirements}{section.1.3}% 7
+\BOOKMARK [1][-]{section.1.4}{Time Schedule}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Tracking And Processing The Line Using Image Processing}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Capturing The Image}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Identifying and Extracting the Line}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Contrast and brightness}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{Histogram}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.3}{Slicing}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.4}{Optimum thresholding}{section.2.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Calculating the Error Signal}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.4}{Performance Considerations and Possible Improvements}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Controlling The Motors}{}% 18
+\BOOKMARK [1][-]{section.3.1}{The DC-motor}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.1.1}{DC-motor}{section.3.1}% 20
+\BOOKMARK [2][-]{subsection.3.1.2}{Gears}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.3}{Transferfunction for DC-motor}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{Microcontroller}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{The MCU}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Programming}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{H-bridge}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.1}{PWM Pulse-width modulation}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.2}{Direction control}{section.3.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Encoders}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Feedback and Control Loop}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.5.1}{Straight state}{section.3.5}% 31
+\BOOKMARK [2][-]{subsection.3.5.2}{Position state}{section.3.5}% 32
+\BOOKMARK [2][-]{subsection.3.5.3}{Speed state}{section.3.5}% 33
+\BOOKMARK [0][-]{chapter.4}{Measuring distance to wall}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Practical use of }{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{IR sensor}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Converting using an ADC}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{Communication between devices}{}% 38
+\BOOKMARK [0][-]{chapter.6}{Control systems}{}% 39
+\BOOKMARK [1][-]{section.6.1}{Desing}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.3}{PID controller}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.4}{tuning}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{Following The Track}{}% 44
+\BOOKMARK [1][-]{section.7.1}{Requirements for the track}{chapter.7}% 45
+\BOOKMARK [2][-]{subsection.7.1.1}{State machine}{section.7.1}% 46
+\BOOKMARK [0][-]{chapter.8}{Simulation and Testing}{}% 47
+\BOOKMARK [1][-]{section.8.1}{SIMULINK}{chapter.8}% 48
+\BOOKMARK [0][-]{section*.2}{Appendices}{}% 49
+\BOOKMARK [0][-]{appendix.A}{First Appendix}{}% 50
+\BOOKMARK [1][-]{section.A.1}{Section in Appendix}{appendix.A}% 51
+\BOOKMARK [1][-]{section.A.2}{Another Section}{appendix.A}% 52

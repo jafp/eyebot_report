@@ -1,0 +1,136 @@
+% Add packages
+%\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[danish, english]{babel}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{makeidx} % Indexing package
+\usepackage[intoc]{nomencl} % Nomenclature package
+\usepackage{color}
+\usepackage{mathpazo}
+%\usepackage{times}
+\usepackage[crop=pdfcrop]{pstool}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage[version=3]{mhchem}
+\usepackage{relsize}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{indentfirst}
+\usepackage{listings}
+
+% Change table of contents name
+\renewcommand{\contentsname}{Table of Contents}
+
+% Enable subfigures
+\newsubfloat{figure}
+
+% Path to graphics
+\graphicspath{{resources/}}
+
+\everymath{\displaystyle}
+
+% Avoid a warning
+\pdfminorversion=5
+
+% Define layout dimensions
+
+\setlrmarginsandblock{35mm}{25mm}{*}
+\setulmarginsandblock{30mm}{30mm}{*}
+\setheadfoot{8mm}{10mm}
+\checkandfixthelayout
+\OnehalfSpacing
+
+\setaftersecskip{1\onelineskip plus 3ex minus 3ex}
+\setaftersubsecskip{1\onelineskip plus 3ex minus 3ex}
+\setbeforesecskip{-1\onelineskip plus -3ex minus -3ex}
+\setbeforesubsecskip{-1\onelineskip plus -3ex minus -3ex}
+
+
+
+\EndPreamble
+
+\usepackage{natbib} % Bibliography package
+\usepackage{siunitx} % Should stay after \EndPreamble
+
+% Create a theorem environment
+\newtheorem{theorem}{Theorem}
+
+% Chapter style
+\chapterstyle{madsen}
+
+% Section numbering depth
+\setcounter{secnumdepth}{2}
+
+% Enable indexing
+\makeindex
+
+% Enable nomenclature
+\makenomenclature
+
+
+% Define thesis data
+\def\ThYear{2013}
+
+\def\ThTitleEN{Eyebot - A Line Following Robot Based On Camera Tracking}
+\def\ThSubtitleEN{}
+\def\ThTitleDK{Min dejlige projekt}
+\def\ThSubtitleDK{Min super undertitel}
+
+\def\ThAuthors{André D. B. Christensen (110033)\\Jacob A. F. Pedersen (120374)}
+\def\ThSupervisors{Henrik Møller, DTU Ballerup Campus}
+\def\ThDepartment{\textbf{DTU Diplom}\\ Lautrupvang 15\\ 2750 Ballerup\\ Denmark\\ Tel: +45 3588 5088}
+
+\def\ThElektroEmail{diplom@diplom.dtu.dk}
+\def\ThProjectPeriod{September 2013 - December 2013}
+\def\ThECTS{10}
+\def\ThEducation{BEng}
+\def\ThField{Electrical Engineering}
+\def\ThClass{Confidential until October 1st, 2016}
+\def\ThRemarks{This report is submitted as partial fulfillment of the requirements for graduation in the above education at the Technical University of Denmark.}
+\def\ThCopyrights{\copyright André D. B. Christensen \& Jacob A. F. Pedersen, 2013}
+
+
+% Enable line numbering
+%\usepackage{lineno}
+%\pagewiselinenumbers
+%\modulolinenumbers[5]
+
+\setsecnumdepth{subsection}
+
+% Change table of contents name
+\renewcommand*{\contentsname}{Table of Contents}
+\maxtocdepth{subsection} % Subsections and above
+
+% Make floats name bold
+\captionnamefont{\bfseries}
+
+% Get a signature command
+\makeatletter
+\newcommand*{\getlength}[1]{\strip@pt#1}
+\makeatother
+
+\newlength{\signlength}
+\setlength{\signlength}{0.5\textwidth}
+
+\newcommand{\signature}[1]{%
+\noindent \line(1,0){\getlength{\signlength}}\\
+\noindent #1
+}
+
+% Add measuring units to nomenclature
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+
+\captionstyle{\OnehalfSpacing}
+
+%\addbibresource{mybib.bib}
+
+\setlength{\belowcaptionskip}{10pt plus 5pt minus 5pt}
+
+% Company logo
+\def\bCompanyLogo{true}
+
+% A fix for memoir-kluwer
+\renewcommand{\bf}{\textbf}
